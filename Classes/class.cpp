@@ -13,7 +13,7 @@ private:
 public:
     void set_age(int userAge)
     {
-        userAge = age;
+        age = userAge;
     }
 
     int get_age()
@@ -53,7 +53,10 @@ public:
 
     string to_string()
     {
-        // TODO
+        stringstream jointString;
+        char comma{','};
+        jointString << age << comma << first_name << comma << last_name << comma << standard;
+        return jointString.str();
     }
 };
 
