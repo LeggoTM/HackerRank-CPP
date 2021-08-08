@@ -25,6 +25,14 @@ int main()
     {
         cin >> value;
         vector<int>::iterator low = lower_bound(sortedIntegers.begin(), sortedIntegers.end(), value);
+        int indexofValue = (low - sortedIntegers.begin());
+        if(sortedIntegers[indexofValue] == value) {
+            cout << "Yes ";
+        }
+        else {
+            cout << "No ";
+        }
+        cout << indexofValue + 1 << "\n";
     }
 
     return 0;
